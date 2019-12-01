@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+  <meta charset='utf-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
+  <meta name='msapplication-tap-highlight' content='no' />
+  <meta name='description' content='RoboSUST is an interdisciplinary robotics and research lab that encourages the unconventional mixing and matching of seemingly disparate research areas.' />
+  <meta property='og:url' content='https://www.media.mit.edu/' />
+  <meta property='og:title' content='RoboSUST' />
+  <meta property='og:description' content='RoboSUST is an interdisciplinary robotics and research lab that encourages             the unconventional mixing and matching of seemingly disparate research areas.' />
+  <meta property='og:image' content='https://dam-prod.media.mit.edu/thumb/2018/07/16/scratchconference2.jpg.1400x1400.jpg' />
+  <meta property='og:type' content='website' />
+  <meta property='og:site_name' content='MIT Media Lab' />
+  <meta name='twitter:url' content='https://www.media.mit.edu/' />
+  <meta name='twitter:title' content='RoboSUST' />
+  <meta name='twitter:description' content='RoboSUST Lab is an interdisciplinary robotics and research lab that encourages             the unconventional mixing and matching of seemingly disparate research areas.' />
+  <meta name='twitter:image' content='https://dam-prod.media.mit.edu/thumb/2018/07/16/scratchconference2.jpg.1400x1400.jpg' />
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta name='twitter:site' content='@medialab' />
+  
+  <title>RoboSUST</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href='/img/rslogo.png'>
+  <link rel="apple-touch-icon" sizes="60x60" href='/img/rslogo.png'>
+  <link rel="apple-touch-icon" sizes="72x72" href='/img/rslogo.png'>
+  <link rel="apple-touch-icon" sizes="76x76" href='/img/rslogo.png'>
+  <link rel="apple-touch-icon" sizes="114x114" href='/img/rslogo.png'>
+  <link rel="apple-touch-icon" sizes="120x120" href='/img/rslogo.png'>
+  <link rel="apple-touch-icon" sizes="144x144" href='/img/rslogo.png'>
+  <link rel="apple-touch-icon" sizes="152x152" href='/img/rslogo.png'>
+  <link rel="apple-touch-icon" sizes="180x180" href='/img/rslogo.png'>
+  <link rel="shortcut icon" type="image/png" sizes="192x192"  href='img/rslogo.png'>
+  <link rel="shortcut icon" type="image/png" sizes="144x144"  href='img/rslogo.png'>
+  <link rel="icon" type="image/png" sizes="32x32" href='img/rslogo.png'>
+  <link rel="icon" type="image/png" sizes="96x96" href='img/rslogo.png'>
+  <link rel="icon" type="image/png" sizes="16x16" href='img/rslogo.png'>
+  <link rel='icon' type='image/x-icon' href='img/rsico.ico' />
+
+  <link rel='manifest' href='/static/manifest.dc32cfbe8625.json' />
+  <meta name='msapplication-config' content='/static/configs/browserconfig.4bf0602d5406.xml' />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+
+
+  <link rel='stylesheet' type='text/css' href='/css/app.15fa1b69f113.css' />
+  <link rel="stylesheet" type="text/css" href="/css/hijack-styles.a7cafac63295.css" />
+
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+
+
+  <script>
+      mlScripts = [];
+  </script>
+</head>
+
+
+<body class=' state-groups-hide-accepting'>
+
+  <!-- starts -->
+  <div class='global-container'>
+
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+        </div>
+
+        
+      </div>
+<footer class='global-footer'>
+  <div class="f_widgets_inner row">
+    <div class="col-lg-4 col-md-6">
+    <nav class='global-footer-section variant-sitemap'>
+
+        <section class='sitemap-section variant-primary'>
+            <div class='global-footer-section-hd'>
+                <div class='glyph'>
+                    <h2>
+                        <img src="http://localhost:5555/img/rslogo.png" style="height: 25px; width: 40px;">
+                    </h2>
+                </div>
+            </div>
+            <div class='global-footer-section-bd'>
+                <ul class='sitemap-list'>
+                    
+  
+                    {{#if user}}
+                    <li><a href='/'>News &amp; Updates</a></li>
+                    
+                    <li><a href='/'>Research</a></li>
+                    
+                    <li><a href='/users/about'>About</a></li>
+                    
+                    <li><a href='/users/projects'>Projects</a></li>
+                    
+                    <li><a href='/users/people/'>People</a></li>
+                    
+                    <li><a href='/users/members/'>Members</a></li>
+                    
+                    <li><a href='/'>Blog</a></li>
+                    
+                    <li><a href='/users/team/'>Team</a></li>
+
+                    <li><a href='/users/write/'>Write</a></li>
+
+                    <li><a href='/users/logout/'>Logout</a></li>
+                    {{else}}
+                    <li><a href='/'>News &amp; Updates</a></li>
+                    
+                    <li><a href='/'>Research</a></li>
+                    
+                    <li><a href='/users/about'>About</a></li>
+                    
+                    <li><a href='/users/projects/'>Projects</a></li>
+                    
+                    <li><a href='/users/people/'>People</a></li>
+                    
+                    <li><a href='/users/members/'>Members</a></li>
+                    
+                    <li><a href='/'>Blog</a></li>
+                    
+                    <li><a href='/users/team/'>Team</a></li>
+                    {{/if}}
+
+                    
+                </ul>
+            </div>
+        </section>
+        
+    </nav>
+  </div>
+
+    <div class="col-lg-4 col-md-6">
+                    <aside class="f_widget subscribe_widget">
+                        <div class="f_w_title">
+                            <h3>Our Newsletter</h3>
+                        </div>
+                        <p>Subscribe to our mailing list to get the updates to your email inbox.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
+                            </span>
+                        </div>
+                        
+                    </aside>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+    <div class='global-footer-section variant-meta'>
+        <div class='global-footer-section-bd'>
+            <ul class='social-links'>
+                <li>
+                    <img src="http://localhost:5555/img/rslogo.png">
+                </li>
+                <li>
+                    <a href='https://www.facebook.com/robosustofficial/' target='_blank'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M13.958,10h3.75v3.75h-3.75v8.75h-3.75v-8.75H7.292V10h2.917V7.5c0-2.755,2.06-5,4.583-5h2.917v3.75h-2.917 c-0.463,0-0.833,0.556-0.833,1.25V10z'/>
+</svg></span></a>
+                </li>
+                <li>
+                    <a href='https://www.facebook.com/robosustofficial/' target='_blank'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M22.494,8.75h-6.088c-0.995-1.019-2.384-1.667-3.912-1.667c-1.527,0-2.917,0.648-3.912,1.667H2.495V5.417 C2.495,3.82,3.814,2.5,5.411,2.5h14.167c1.597,0,2.917,1.319,2.917,2.917V8.75z M22.494,10.417v9.167 c0,1.597-1.319,2.917-2.917,2.917H5.411c-1.597,0-2.917-1.319-2.917-2.917v-9.167h5c-0.278,0.648-0.417,1.342-0.417,2.083 c0,2.986,2.431,5.417,5.417,5.417c2.986,0,5.417-2.431,5.417-5.417c0-0.741-0.139-1.436-0.417-2.083H22.494z M8.745,12.5 c0-2.061,1.667-3.75,3.75-3.75c2.061,0,3.75,1.689,3.75,3.75c0,2.083-1.689,3.75-3.75,3.75C10.411,16.25,8.745,14.583,8.745,12.5z' />
+</svg></span></a>
+                </li>
+                
+            </ul>
+            <p>
+                <div class='mit-icon-holder'>
+                    <img src="http://localhost:5555/img/sustlogo.png" style="height: 25px; width: 25px;">
+                </div>
+                <a href='http://sust.edu/'>Shahjalal University of Science and Technology</a><br>
+            </p>
+
+            <p><a href='/about/support-the-lab/'>Donate to RoboSUST</a></p>
+           
+        </div>
+    </div>
+  </div>
+  </div>
+</footer>
+
+                
+            </div>
+        </div>
+
+        <div class='modals-container global-modals'>
+            <div class='modal-forms'></div>
+            <template class='modal-template'>
+                <div class='modal'>
+                    <div class='modal-scroller'>
+                        <div class='modal-pane'>
+                            <a class='close-modal-x close-modal'>
+                                <i class='icon'>
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20px" height="20px">
+     <path id="XMLID_730_" d="M7.9,20c-0.2,0-0.4-0.2-0.4-0.4v-7.1H0.4c-0.2,0-0.4-0.2-0.4-0.4V7.9c0-0.2,0.2-0.4,0.4-0.4h7.1V0.4
+         C7.5,0.2,7.7,0,7.9,0h4.2c0.2,0,0.4,0.2,0.4,0.4v7.1h7.1c0.2,0,0.4,0.2,0.4,0.4v4.2c0,0.2-0.2,0.4-0.4,0.4h-7.1v7.1
+         c0,0.2-0.2,0.4-0.4,0.4H7.9z"/>
+</svg>
+
+                                </i>
+                            </a>
+                            <div class='modal-content'></div>
+                        </div>
+                        <div class='modal-curtain'></div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class='templates-container global-templates'>
+            
+            
+<script class='slideshow-template' data-type='handlebars' type='text/x-handlebars-template'>
+    <div class='slideshow'>
+        <div class='slideshow-header'>
+            
+            {{#if readView}}
+            <h1 class='slideshow-title'>{{{gallery_title}}}</h1>
+            {{/if}}
+            
+
+            
+            
+<div class='share-widget'>
+  <h1>Share this </h1>
+  <ul class='social-links'>
+      
+        <li>
+          <a target='_blank' href='https://twitter.com/share?url=https%3A%2F%2Fwww.media.mit.edu%2F&amp;text=News+%26+Updates%2C+via+%40medialab'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M20.463,8.426c0,0.186,0,0.347,0,0.533c0,5.417-4.12,11.666-11.666,11.666c-2.315,0-4.491-0.509-6.296-1.667 c0.324,0.046,0.648,0.069,0.972,0.069c1.921,0,3.704-0.833,5.092-1.944c-1.782-0.023-3.31-1.227-3.819-2.847 c0.255,0.046,0.509,0.07,0.764,0.07c0.37,0,0.741-0.046,1.088-0.139c-1.875-0.37-3.287-2.037-3.287-4.028c0-0.023,0-0.023,0-0.046 c0.556,0.301,1.181,0.486,1.852,0.509C4.051,9.862,3.334,8.612,3.334,7.199c0-0.764,0.208-1.389,0.555-1.991 c2.037,2.477,5.046,4.028,8.449,4.213c-0.07-0.301-0.093-0.625-0.093-0.949c0-2.269,1.829-4.097,4.097-4.097 c1.181,0,2.245,0.509,3.009,1.296c0.926-0.185,1.805-0.532,2.592-0.995c-0.301,0.949-0.949,1.759-1.805,2.268 c0.833-0.092,1.62-0.324,2.361-0.648C21.944,7.13,21.25,7.847,20.463,8.426z'/>
+</svg>
+</span></a>
+        </li>
+      
+      
+        <li>
+          <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?url=https%3A%2F%2Fwww.media.mit.edu%2F'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M13.958,10h3.75v3.75h-3.75v8.75h-3.75v-8.75H7.292V10h2.917V7.5c0-2.755,2.06-5,4.583-5h2.917v3.75h-2.917 c-0.463,0-0.833,0.556-0.833,1.25V10z'/>
+</svg></span></a>
+        </li>
+      
+      
+        <li>
+          <a target='_blank' href='https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.media.mit.edu%2F&amp;mini=true'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25 25' style='enable-background:new 0 0 25 25;' xml:space='preserve'><path d='M6.1,7.5L6.1,7.5C4.8,7.5,4,6.7,4,5.6c0-1.1,0.8-1.9,2.1-1.9c1.3,0,2.1,0.8,2.1,1.9C8.2,6.7,7.4,7.5,6.1,7.5z M8,20.4H4.2 V9.1H8V20.4z M21.5,20.4h-3.8v-6c0-1.5-0.5-2.6-1.9-2.6c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,0.9v6.3H10c0-10.2,0-11.3,0-11.3 h3.8v1.6h0c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.6,4.3,5.1V20.4z'/></svg>
+</span></a>
+        </li>
+      
+  </ul>
+</div>
+
+
+            
+
+            <a class='close-modal-x close-modal'>
+                <i class='icon'>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20px" height="20px">
+     <path id="XMLID_730_" d="M7.9,20c-0.2,0-0.4-0.2-0.4-0.4v-7.1H0.4c-0.2,0-0.4-0.2-0.4-0.4V7.9c0-0.2,0.2-0.4,0.4-0.4h7.1V0.4
+         C7.5,0.2,7.7,0,7.9,0h4.2c0.2,0,0.4,0.2,0.4,0.4v7.1h7.1c0.2,0,0.4,0.2,0.4,0.4v4.2c0,0.2-0.2,0.4-0.4,0.4h-7.1v7.1
+         c0,0.2-0.2,0.4-0.4,0.4H7.9z"/>
+</svg>
+
+                </i>
+            </a>
+        </div>
+
+        <div class='slideshow-images'>
+            
+            {{#each images}}
+                <div class='image-wrapper'>
+                    <div class='image' style='background-image: url("{{ encodeURI image.url }}")'></div>
+                </div>
+            {{/each}}
+            
+        </div>
+
+        <div class='slideshow-controls'>
+            <a class='prev-image'>
+                <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M15.228,21.396l-8.623-8.622c-0.146-0.146-0.146-0.396,0-0.542l8.623-8.623 c0.146-0.146,0.396-0.146,0.542,0l2.624,2.624c0.146,0.146,0.146,0.396,0,0.542l-5.749,5.728l5.749,5.728 c0.146,0.146,0.146,0.396,0,0.542l-2.624,2.624c-0.083,0.062-0.167,0.104-0.271,0.104S15.312,21.458,15.228,21.396z'/>
+</svg>
+                Previous
+            </a>
+            <a class='next-image'>
+                Next
+                <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M9.772,3.603l8.623,8.623c0.146,0.146,0.146,0.396,0,0.542L9.772,21.39c-0.146,0.146-0.396,0.146-0.542,0 l-2.624-2.624c-0.146-0.146-0.146-0.396,0-0.542l5.728-5.728L6.606,6.769c-0.146-0.146-0.146-0.396,0-0.542L9.23,3.603 C9.313,3.541,9.397,3.5,9.501,3.5S9.688,3.541,9.772,3.603z'/>
+</svg>
+            </a>
+
+            <p class='slideshow-counter'>
+                <span class='current-index'></span>
+                of
+                <span class='total-count'></span>
+            </p>
+        </div>
+
+        
+        <div class='slideshow-meta'>
+            <div class='slideshow-meta-body'>
+                {{#each images}}
+                <div class='slideshow-image-meta-wrap'>
+                    <p class='slideshow-image-title'>
+                        {{ title }}
+                    </p>
+                    <div class='slideshow-image-caption'>
+                        {{{ caption }}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+            <div class='slideshow-meta-footer'>
+                {{#each images}}
+                <p class='slideshow-image-title'>
+                    {{ title }}
+                </p>
+                {{/each}}
+
+                <div class='slideshow-tags'>
+                    {{#each tags}}
+                    <a href='{{url_path}}'>#{{title}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</script>
+
+        </div>
+
+        
+            <script src='http://localhost:5555/js/common.876bad966688.js'></script>
+        
+
+        
+        <!-- Google Analytics -->
+        <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        
+        
+        ga('create', 'UA-83133910-1', 'auto');
+        ga('send', 'pageview');
+        
+        
+        
+        ga('create', 'UA-1592615-30', {'name':'mitsitewide'});
+        ga('mitsitewide.send', 'pageview');
+        
+        
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <!-- End Google Analytics -->
+        
+
+        
+        
+
+        
+        <script>
+            require(['Raven'], function (Raven) {
+                Raven.config('https://348f83c6ba454447a1dea8753e38fa5d@sentry.media.mit.edu/3').install();
+                
+            });
+        </script>
+        
+
+        
+
+        <script>
+            require(['core'], function (core) {
+                var serviceOptions = {
+                    externalLinkObserver: {
+                        linksInModal:  false
+                    }
+                };
+                core.init(mlScripts, serviceOptions);
+            });
+
+            if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+                require(['services/ieHandler'], function (ieHandler) {
+                    ieHandler.init();
+                });
+            }
+        </script>
+
+</body>
+</html>

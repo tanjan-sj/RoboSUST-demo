@@ -1,0 +1,31 @@
+{
+  "name": "robosustDemo",
+  "version": "1.0.0",
+  "description": "organization website with implemented authorization system for reg",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sumaya Jannat",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "^1.4.1",
+    "ejs": "*",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "^5.3.0",
+    "mongodb": "*",
+    "mongoose": "*",
+    "nodemailer": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}

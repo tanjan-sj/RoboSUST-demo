@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include partials/head %>
+</head>
+<body class="container">
+	<header>
+		<%include partials/header %>
+	</header>
+
+	<main>
+		 <div class='global-drawer' tabindex='0'>
+    <section class='global-drawer-pane' data-pane='search'>
+        <form id='global-search'>
+            <fieldset class='field-group'>
+                <label>Find People, Projects, etc.</label>
+                
+
+<fieldset class='field autocomplete variant-search variant-single-value   variant-no-prefetch'   
+    data-single-value='true'
+    
+    data-endpoint='/q/{{query}}/?extra_meta=content'
+    >
+
+    <div class='autocomplete-drop-menu '>
+        
+            <i class='search-icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <title>Search</title>
+
+    <path d='M3.939,21.06c-0.583-0.583-0.583-1.541,0-2.125l5.104-5.082c-0.667-1.042-1.042-2.291-1.042-3.603 c0-3.729,3.021-6.749,6.748-6.749c3.729,0,6.749,3.02,6.749,6.749c0,3.728-3.021,6.748-6.749,6.748 c-1.312,0-2.562-0.375-3.603-1.042L6.064,21.06C5.48,21.644,4.522,21.644,3.939,21.06z M14.749,14.749 c2.479,0,4.499-2.02,4.499-4.499s-2.021-4.499-4.499-4.499s-4.498,2.021-4.498,4.499S12.27,14.749,14.749,14.749z'/>
+</svg>
+</i>
+        
+
+        <div class='field custom-input' data-ignore='true'>
+            <input class='autocomplete-control drop-menu-control'
+                type='text'
+                placeholder=''
+                autocomplete='off'/>
+        </div>
+
+        <ul class='autocomplete-results drop-menu-items-wrap'>
+            
+        </ul>
+    </div>
+
+    <div class='autocomplete-tags '>
+        
+    </div>
+
+    <i class='processing-spinner'>
+    <span class='squares-left'></span>
+    <span class='squares-right'></span>
+</i>
+
+</fieldset>
+
+            </fieldset>
+        </form>
+    </section>
+<% if (!user) { %>
+    <section class='global-drawer-pane' data-pane='user'>
+
+<form id='login-form-0c7cf35f-1190-499f-9423-292931384e3f' class='form login-form' method='post' action='/users/login/'>
+    <fieldset class='form-bd'>
+
+        <div data-csrf></div>
+
+       
+        <div class='field-group'>
+            <label for='id_username_0c7cf35f-1190-499f-9423-292931384e3f'>User:</label>
+            <div class='field custom-input '>
+                 <input type='text' name='username' id='id_username_0c7cf35f-1190-499f-9423-292931384e3f' required>
+                 
+            </div>
+        </div>
+        
+
+        
+        <div class='field-group'>
+            <label for='id_password_0c7cf35f-1190-499f-9423-292931384e3f'>Password:</label>
+            <div class='field custom-input '>
+                 <input type='password' name='password' id='id_password_0c7cf35f-1190-499f-9423-292931384e3f' required>
+
+                 
+            </div>
+        </div>
+        
+
+    </fieldset>
+
+    <footer class='form-ft'>
+        <div class='button-group'>
+            <input type='submit' class='button state-disabled form-submit' value='Log in'>
+        </div>
+        
+    </footer>
+
+    
+
+    <script>
+        mlScripts.push(function (core) {
+            require(['forms/Form'], function (Form) {
+                new Form({
+                    selector: '#login-form-0c7cf35f-1190-499f-9423-292931384e3f'
+                });
+            });
+        });
+    </script>
+</form>
+
+        
+    </section>
+<% } %>
+
+    <section class='global-drawer-pane' data-pane='nav'>
+        
+
+
+<nav class='global-drawer-nav'>
+    <ul>
+        
+            <li class='state-current '>
+                <a href='/'>
+                    News &amp; Updates
+                </a>
+
+                
+            </li>
+        
+            <li class=' '>
+                <a href='/research/'>
+                    Research
+                </a>
+
+                
+            </li>
+        
+            <li class=' '>
+                <a href='/about/'>
+                    About
+                </a>
+
+                
+            </li>
+        
+            <li class=' '>
+                <a href='/projects/'>
+                    Projects
+                </a>
+
+                
+            </li>
+        
+            <li class=' '>
+                <a href='/people/'>
+                    People
+                </a>
+
+                
+            </li>
+        
+            <li class=' '>
+                <a href='/members/'>
+                    Members
+                </a>
+
+                
+            </li>
+        
+            <li class=' '>
+                <a href='/blog/'>
+                    Blog
+                </a>
+
+                
+            </li>
+        
+            <li class=' '>
+                <a href='/team/'>
+                    Team
+                </a>
+
+                
+            </li>
+
+            <li class=' '>
+                <a href='/users/register/'>
+                    Register
+                </a>
+
+                
+            </li>
+
+            <% if (user) { %>
+          	<li class=''><a href='/users/write'>Write</a></li>
+          	<li class=''><a href='/users/logout'>Logout</a></li>
+        	<% } %>
+
+            
+
+        
+    </ul>
+</nav>
+
+
+    </section>
+
+</div>
+
+                
+
+                <div class='global-page '>
+                    
+    
+    
+
+
+
+
+
+<div class='hero state-has-image
+         variant-module'
+    style='background-image: url("http://localhost:5555/img/just-baked-vintage.png"); background-position: 50.6416131989001% 30.2478072042919%;'>
+
+
+
+
+
+
+    <div class='hero-content'>
+        <div class='hero-glyphs'>
+        <img src="http://localhost:5555/img/sustlogo.png" style="height: 50px; width: 50px;">   
+        </div>
+
+        <h1 class='hero-content-title'><a href='/'>RoboSUST: Robotics for Glory</a></h1>
+        <div class='hero-content-meta'>
+            
+                
+
+<div>
+    in <a href="/">IICT-432(A)</a> &middot; SUST
+</div>
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+
+    
+
+<div class='tmp-gradient-bg'></div>
+<div class='colorize-bg' style='background-image: url("http://localhost:5555/img/just-baked-vintage.png"); background-position: 50.6416131989001% 30.2478072042919%;'></div>
+<div class='colorize-overlay'></div>
+
+
+</div>
+
+
+
+
+    <div class='rail-layout'>
+        
+    <div class='rail '>
+    <div class='rail-content'>
+        
+    
+    <nav class='rail-nav'>
+        
+
+<ul class='rail-nav-list'>
+
+            <li class='state-current'><a href='/'>News &amp; Updates </a></li>
+
+        
+    
+        
+            <li class=''><a href='/research/'>Research</a></li>
+
+        
+    
+        
+            <li class=''><a href='/about/'>About </a></li>
+
+        
+    
+        
+            <li class=''><a href='/projects/'>Projects </a></li>
+
+        
+    
+        
+            <li class=''><a href='/people/'>People </a></li>
+
+        
+    
+        
+            <li class=''><a href='/members/'>Members </a></li>
+
+        
+    
+        
+            <li class=''><a href='/blog/'>Blog </a></li>
+
+        
+    
+        
+            <li class=''><a href='/team/'>Team </a></li>
+
+            <li class=''><a href='/users/register/'>Register</a></li>
+
+            <% if (user) { %>
+          	<li class=''><a href='/users/write'>Write</a></li>
+          	<li class=''><a href='/users/logout'>Logout</a></li>
+        	<% } %>
+
+            
+    
+</ul>
+
+    </nav>
+    
+
+    <div class='rail-meta'>
+        <ul class='rail-meta-list'>
+            <li>
+                <ul class='social-links'>
+                    <li>
+                        <a href='https://twitter.com/medialab' target='_blank'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M20.463,8.426c0,0.186,0,0.347,0,0.533c0,5.417-4.12,11.666-11.666,11.666c-2.315,0-4.491-0.509-6.296-1.667 c0.324,0.046,0.648,0.069,0.972,0.069c1.921,0,3.704-0.833,5.092-1.944c-1.782-0.023-3.31-1.227-3.819-2.847 c0.255,0.046,0.509,0.07,0.764,0.07c0.37,0,0.741-0.046,1.088-0.139c-1.875-0.37-3.287-2.037-3.287-4.028c0-0.023,0-0.023,0-0.046 c0.556,0.301,1.181,0.486,1.852,0.509C4.051,9.862,3.334,8.612,3.334,7.199c0-0.764,0.208-1.389,0.555-1.991 c2.037,2.477,5.046,4.028,8.449,4.213c-0.07-0.301-0.093-0.625-0.093-0.949c0-2.269,1.829-4.097,4.097-4.097 c1.181,0,2.245,0.509,3.009,1.296c0.926-0.185,1.805-0.532,2.592-0.995c-0.301,0.949-0.949,1.759-1.805,2.268 c0.833-0.092,1.62-0.324,2.361-0.648C21.944,7.13,21.25,7.847,20.463,8.426z'/>
+</svg>
+</span></a>
+                    </li>
+                    <li>
+                        <a href='https://www.facebook.com/mitmedialab' target='_blank'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M13.958,10h3.75v3.75h-3.75v8.75h-3.75v-8.75H7.292V10h2.917V7.5c0-2.755,2.06-5,4.583-5h2.917v3.75h-2.917 c-0.463,0-0.833,0.556-0.833,1.25V10z'/>
+</svg></span></a>
+                    </li>
+                    <li>
+                        <a href='https://www.instagram.com/mitmedialab/' target='_blank'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M22.494,8.75h-6.088c-0.995-1.019-2.384-1.667-3.912-1.667c-1.527,0-2.917,0.648-3.912,1.667H2.495V5.417 C2.495,3.82,3.814,2.5,5.411,2.5h14.167c1.597,0,2.917,1.319,2.917,2.917V8.75z M22.494,10.417v9.167 c0,1.597-1.319,2.917-2.917,2.917H5.411c-1.597,0-2.917-1.319-2.917-2.917v-9.167h5c-0.278,0.648-0.417,1.342-0.417,2.083 c0,2.986,2.431,5.417,5.417,5.417c2.986,0,5.417-2.431,5.417-5.417c0-0.741-0.139-1.436-0.417-2.083H22.494z M8.745,12.5 c0-2.061,1.667-3.75,3.75-3.75c2.061,0,3.75,1.689,3.75,3.75c0,2.083-1.689,3.75-3.75,3.75C10.411,16.25,8.745,14.583,8.745,12.5z' />
+</svg></span></a>
+                    </li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    </div>
+
+    
+</div>
+
+
+    
+
+<div class='mobile-companion-rail'>
+    <div class='rail-content'>
+        <div class='rail-content-section'>
+            <nav class='rail-nav'>
+                
+
+                
+
+<ul class='rail-nav-list'>
+    
+        
+            <li class='state-current'><a href='/'>News &amp; Updates </a></li>
+            <li class=''><a href='/research/'>Research </a></li>
+            <li class=''><a href='/about/'>About </a></li>        
+            <li class=''><a href='/projects/'>Projects </a></li>
+            <li class=''><a href='/people/'>People </a></li>
+            <li class=''><a href='/members/'>Members </a></li>
+            <li class=''><a href='/blog/'>Blog </a></li>
+            <li class=''><a href='/team/'>Team </a></li>
+            <li class=''><a href='/users/register/'>Register </a></li>
+            <% if (user) { %>
+          	<li class=''><a href='/users/write'>Write</a></li>
+          	<li class=''><a href='/users/logout'>Logout</a></li>
+        	<% } %>
+
+        
+    
+</ul>
+
+
+                
+                <a href='#' id='toggle-fe7d6e40-ba57-461e-805e-e663f8d8ae3a' class='rail-nav-mobile-toggle'>
+                    <span class='toggle-open'>More <span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M21.396,9.771l-8.623,8.623c-0.146,0.146-0.396,0.146-0.542,0L3.609,9.771 c-0.146-0.146-0.146-0.396,0-0.541l2.625-2.625c0.146-0.146,0.396-0.146,0.542,0l5.728,5.749l5.728-5.749 c0.146-0.146,0.396-0.146,0.542,0l2.625,2.625C21.459,9.313,21.5,9.396,21.5,9.501S21.459,9.688,21.396,9.771z'/>
+</svg></span></span>
+                    <span class='toggle-close'>Close <span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M3.603,15.229l8.623-8.623c0.146-0.146,0.396-0.146,0.542,0l8.623,8.623c0.146,0.146,0.146,0.396,0,0.542 l-2.625,2.624c-0.146,0.146-0.396,0.146-0.541,0l-5.728-5.728l-5.729,5.728c-0.146,0.146-0.396,0.146-0.541,0l-2.625-2.624 C3.541,15.687,3.5,15.604,3.5,15.499C3.5,15.396,3.541,15.312,3.603,15.229z'/>
+</svg>
+</span></span>
+                </a>
+                <script>
+                    mlScripts.push(function (core) {
+                        require(['ui/OpenCloseToggler'], function (OpenCloseToggler) {
+                            new OpenCloseToggler({
+                                selector: '#toggle-fe7d6e40-ba57-461e-805e-e663f8d8ae3a',
+                                targetSelector: '^.mobile-companion-rail'
+                            });
+                        });
+                    });
+                </script>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        <div class='rail-layout-body'>
+            
+            <div data-pjax-pagination>
+                
+    <div class='module-layout item-container variant-no-eyebrows'>
+        
+
+
+<div data-href='/articles/helping-computers-perceive-human-emotions/'
+
+
+    class='container-item module  variant-with-img   '>
+
+    
+
+    
+    
+    
+        <div class='module-head' style='background-image: url("http://localhost:5555/img/ribo2.jpg"); background-position: 50.0% 50.0%;'>
+            
+
+    
+    
+    <div class='glyph module-glyph shim-svgs'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160" height="55" viewBox="0 0 160 55" enable-background="new 0 0 160 55" xml:space="preserve">
+    </svg></div>
+    
+    
+
+
+
+        </div>
+        <div class='module-body'>
+            <a class='module-content-guard' href='/articles/helping-computers-perceive-human-emotions/'>
+    <div class='module-eyebrow'>
+        <span class='module-eyebrow-type'>Article</span>
+        <span class='module-eyebrow-pubto'>Research</span>
+    </div>
+    <h2 class='module-title'>RIBO: A Social Humanoid Robot</h2>
+
+    
+<div class='module-excerpt'>
+    <p>A humanoid robot learns from us to be social</p>
+</div>
+
+
+</a>
+<footer class='module-meta'>
+
+    
+
+<div>
+    in <a href="/groups/affective-computing/overview/">Affective Computing</a>
+</div>
+
+
+    
+
+
+<div>
+    <a href='/research/?filter=everything&amp;tag=human-machine-interaction'>#human-machine interaction</a> <a href='/research/?filter=everything&amp;tag=machine-learning'>#machine learning</a> 
+</div>
+
+
+
+
+</footer>
+
+        </div>
+
+</div>
+
+<div data-href='/projects/mediated-atmospheres/overview/'
+
+
+    class='container-item module  variant-with-img   '>
+   
+        <div class='module-head' style='background-image: url("http://localhost:5555/img/intra1.jpg"); background-position: 50.843253968254% 61.520727841587394%;'>
+            
+
+    
+    
+    <div class='glyph module-glyph shim-svgs'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160" height="55" viewBox="0 0 160 55" enable-background="new 0 0 160 55" xml:space="preserve">
+       
+    </svg></div>
+              
+        </div>
+        <div class='module-body'>
+            <a class='module-content-guard' href='/projects/mediated-atmospheres/overview/'>
+    <div class='module-eyebrow'>
+        <span class='module-eyebrow-type'>Project</span>
+        <span class='module-eyebrow-pubto'>Research</span>
+    </div>
+    <h2 class='module-title'>1st Intra-SUST Robotics Contest Held in SUST</h2>
+
+    
+<div class='module-excerpt'>
+    <p>The first Intra-University Robotics Contest held in SUST was arranged by RoboSUST..</p>
+</div>
+
+
+</a>
+<footer class='module-meta'>
+    
+
+<div>
+    in <a href="/groups/responsive-environments/overview/">Contest</a>
+</div>
+
+<!--     <div>
+        <a href='/people/joep/overview/'>Joseph A. Paradiso</a> &middot; <a href='/people/nanzhao/overview/'>Nan Zhao</a>  +2&nbsp;more
+    </div> -->
+
+<div>
+    <a href='/research/?filter=everything&amp;tag=architecture'>#contest</a> <a href='/research/?filter=everything&amp;tag=health'>#intra</a>
+</div>
+
+</footer>
+
+
+        </div>
+    
+</div>
+
+
+<div data-href='/posts/sust-arcode-becomes-runner-up/'
+
+
+    class='container-item module  variant-with-img   '>
+    
+        <div class='module-head' style='background-image: url("http://localhost:5555/img/sustArcode.jpg"); background-position: 56.110080395794704% 40.345465761875396%;'>   
+    <div class='glyph module-glyph shim-svgs'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160" height="55" viewBox="-559 1473 160 55" style="enable-background:new -559 1473 160 55;" xml:space="preserve">
+</svg></div>
+    
+    
+
+
+
+        </div>
+        <div class='module-body'>
+            <a class='module-content-guard' href='sust-arcode-becomes-runner-up/'>
+    <div class='module-eyebrow'>
+        <span class='module-eyebrow-type'>Post</span>
+        <span class='module-eyebrow-pubto'>Research</span>
+    </div>
+    <h2 class='module-title'>SUST_ARCode Achieves the position of Runners-up in AutoGPv2.0: Treasure Hunt</h2>
+   
+    <div class='module-excerpt'>
+        <p>AutoGPv2.0, Intra-SUST Robotics Contest by RoboSUST</p>
+    </div>
+
+</a>
+<footer class='module-meta'>
+    <div>January, 2018</div>
+
+    
+
+<div>
+    in <a href="/groups/scalable-cooperation/overview/">Contest</a>
+</div>
+
+
+    
+
+
+<div>
+    <a href='/research/?filter=everything&amp;tag=data'>#intra</a> <a href='/research/?filter=everything&amp;tag=economy'>#contest</a> 
+</div>
+
+</footer>
+
+        </div>
+
+</div>
+
+
+<div data-href='/projects/words-in-motion/overview/'
+
+
+    class='container-item module  variant-with-img   '>
+  
+        <div class='module-head' style='background-image: url("http://localhost:5555/img/IRCrunnersup.jpg"); background-position: 50.0% 50.0%;'>
+  
+    <div class='glyph module-glyph shim-svgs'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160" height="55" viewBox="0 0 160 55" enable-background="new 0 0 160 55" xml:space="preserve">
+    </svg></div>
+           
+        </div>
+        <div class='module-body'>
+            <a class='module-content-guard' href='/projects/words-in-motion/overview/'>
+    <div class='module-eyebrow'>
+        <span class='module-eyebrow-type'>Project</span>
+        <span class='module-eyebrow-pubto'>Research</span>
+    </div>
+    <h2 class='module-title'>Runners-Up in IRC Bangladesh Round</h2>
+
+    
+<div class='module-excerpt'>
+    <p>Team RoboSUST was the Runners-up in IRC Bangladesh..</p>
+</div>
+
+
+</a>
+<footer class='module-meta'>
+    
+
+<div>
+    in <a href="/groups/fluid-interfaces/overview/">Contest</a>
+</div>
+  
+    <!-- <div>
+        <a href='/people/pattie/overview/'>Pattie Maes</a> &middot; <a href='/people/cdvm/overview/'>Christian David Vazquez Machado</a> 
+    </div> -->
+
+<div>
+    <a href='/research/?filter=everything&amp;tag=virtual-reality'>#contest</a> <a href='/research/?filter=everything&amp;tag=language-learning'>#winning</a> 
+</div>
+</footer>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+<div data-href='/posts/mamachari/'
+
+
+    class='container-item module  variant-with-img   '>
+
+    
+        <div class='module-head' style='background-image: url("http://localhost:5555/img/SumoChamp.jpg"); background-position: 50.0% 50.0%;'>
+            
+    
+    
+    <div class='glyph module-glyph shim-svgs'><svg x="0px" y="0px" width="160" height="55" viewBox="0 0 160 55" style="enable-background:new 0 0 160 55;" xml:space="preserve">
+<g id="Layer_1_1_" class="st0">
+	
+</g>
+<g id="sk" class="st0">
+	
+</g>
+
+</svg></div>
+
+        </div>
+        <div class='module-body'>
+            <a class='module-content-guard' href='/posts/mamachari/'>
+    <div class='module-eyebrow'>
+        <span class='module-eyebrow-type'>Post</span>
+        <span class='module-eyebrow-pubto'>Research</span>
+    </div>
+    <h2 class='module-title'>Champion at the First SUMO bot contest in Bangladesh</h2>
+
+    
+<div class='module-excerpt'>
+    <p>Team SusT++ secured the position of Champion in the first ever SUMO contest in Bangladesh, organized by NSU..</p>
+</div>
+
+
+</a>
+<footer class='module-meta'>
+    <div>May, 2017</div>
+
+    
+
+<div>
+    in <a href='/groups/city-science/overview/'>Contest</a>
+</div>
+
+<div>
+    <a href='/research/?filter=everything&amp;tag=hacking'>#contest</a> <a href='/research/?filter=everything&amp;tag=transportation'>#winning</a> <a href='/research/?filter=everything&amp;tag=urban-planning'>#urban planning</a> 
+</div>
+
+</footer>
+
+        </div>
+    
+</div>
+
+
+
+
+
+<div data-href='/posts/dizzying-decisions/'
+
+
+    class='container-item module variant-x2 variant-with-img   '>
+  
+        <div class='module-head' style='background-image: url("http://localhost:5555/img/bayeed.jpg"); background-position: 50.0% 50.0%;'>
+            
+
+    
+    
+    <div class='glyph module-glyph shim-svgs'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160" height="55" viewBox="0 0 160 55" enable-background="new 0 0 160 55" xml:space="preserve">
+        
+    </svg></div>
+       </div>
+        <div class='module-body'>
+            <a class='module-content-guard' href='/posts/dizzying-decisions/'>
+    <div class='module-eyebrow'>
+        <span class='module-eyebrow-type'>Post</span>
+        <span class='module-eyebrow-pubto'>Research</span>
+    </div>
+    <h2 class='module-title'>LadyBug: A Line-Follower Robot</h2>
+
+    
+<div class='module-excerpt'>
+    <p>LadyBug was a line follower robot made by first year students of SUST..</p>
+</div>
+
+
+</a>
+<footer class='module-meta'>
+    <div>September, 2016</div>
+
+<div>
+    in <a href='/groups/viral-communications/overview/'>Contest</a>
+</div>
+
+
+    
+
+
+<div>
+    <a href='/research/?filter=everything&amp;tag=communications'>#contest</a> <a href='/research/?filter=everything&amp;tag=economy'>#project</a> 
+</div>
+
+</footer>
+
+        </div>
+    
+</div>
+
+<div data-href='/posts/alumni-profiles-by-area/'
+
+
+    class='container-item module  variant-with-img   '>
+  
+        <div class='module-head' style='background-image: url("http://localhost:5555/img/parti1.jpg"); background-position: 50.0% 50.0%;'>
+        </div>
+        <div class='module-body'>
+            <a class='module-content-guard' href='/posts/alumni-profiles-by-area/'>
+    <div class='module-eyebrow'>
+        <span class='module-eyebrow-type'>Post</span>
+        <span class='module-eyebrow-pubto'>Graduate Program</span>
+    </div>
+    <h2 class='module-title'>Participants of Intra-SUSTv1.0</h2>
+ 
+    <div class='module-excerpt'>
+        <p>Freshers</p>
+    </div>
+
+</a>
+<footer class='module-meta'>
+    <div>September, 2016</div>
+
+    
+
+<div>
+    in <a href="/groups/program-in-media-arts-and-sciences/overview/">Contest</a>
+</div>
+
+</footer>
+
+        </div>
+
+</div>
+
+<!-- begin -->
+   </div>
+
+
+                
+            </div>
+
+            <script>
+                mlScripts.push(function () {
+                    require(['ui/Paginator'], function (Paginator) {
+                        new Paginator();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+                    
+                </div>
+
+	</main>
+
+
+<footer>
+	<% include partials/footer %>
+</footer>
+
+
+</div>
+        </div>
+
+        <div class='modals-container global-modals'>
+            <div class='modal-forms'></div>
+            <template class='modal-template'>
+                <div class='modal'>
+                    <div class='modal-scroller'>
+                        <div class='modal-pane'>
+                            <a class='close-modal-x close-modal'>
+                                <i class='icon'>
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20px" height="20px">
+     <path id="XMLID_730_" d="M7.9,20c-0.2,0-0.4-0.2-0.4-0.4v-7.1H0.4c-0.2,0-0.4-0.2-0.4-0.4V7.9c0-0.2,0.2-0.4,0.4-0.4h7.1V0.4
+         C7.5,0.2,7.7,0,7.9,0h4.2c0.2,0,0.4,0.2,0.4,0.4v7.1h7.1c0.2,0,0.4,0.2,0.4,0.4v4.2c0,0.2-0.2,0.4-0.4,0.4h-7.1v7.1
+         c0,0.2-0.2,0.4-0.4,0.4H7.9z"/>
+</svg>
+
+                                </i>
+                            </a>
+                            <div class='modal-content'></div>
+                        </div>
+                        <div class='modal-curtain'></div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class='templates-container global-templates'>
+            
+            
+<script class='slideshow-template' data-type='handlebars' type='text/x-handlebars-template'>
+    <div class='slideshow'>
+        <div class='slideshow-header'>
+            
+            {{#if readView}}
+            <h1 class='slideshow-title'>{{{gallery_title}}}</h1>
+            {{/if}}
+            
+
+            
+            
+<div class='share-widget'>
+  <h1>Share this </h1>
+  <ul class='social-links'>
+      
+        <li>
+          <a target='_blank' href='https://twitter.com/share?url=https%3A%2F%2Fwww.media.mit.edu%2F&amp;text=News+%26+Updates%2C+via+%40medialab'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M20.463,8.426c0,0.186,0,0.347,0,0.533c0,5.417-4.12,11.666-11.666,11.666c-2.315,0-4.491-0.509-6.296-1.667 c0.324,0.046,0.648,0.069,0.972,0.069c1.921,0,3.704-0.833,5.092-1.944c-1.782-0.023-3.31-1.227-3.819-2.847 c0.255,0.046,0.509,0.07,0.764,0.07c0.37,0,0.741-0.046,1.088-0.139c-1.875-0.37-3.287-2.037-3.287-4.028c0-0.023,0-0.023,0-0.046 c0.556,0.301,1.181,0.486,1.852,0.509C4.051,9.862,3.334,8.612,3.334,7.199c0-0.764,0.208-1.389,0.555-1.991 c2.037,2.477,5.046,4.028,8.449,4.213c-0.07-0.301-0.093-0.625-0.093-0.949c0-2.269,1.829-4.097,4.097-4.097 c1.181,0,2.245,0.509,3.009,1.296c0.926-0.185,1.805-0.532,2.592-0.995c-0.301,0.949-0.949,1.759-1.805,2.268 c0.833-0.092,1.62-0.324,2.361-0.648C21.944,7.13,21.25,7.847,20.463,8.426z'/>
+</svg>
+</span></a>
+        </li>
+      
+      
+        <li>
+          <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?url=https%3A%2F%2Fwww.media.mit.edu%2F'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M13.958,10h3.75v3.75h-3.75v8.75h-3.75v-8.75H7.292V10h2.917V7.5c0-2.755,2.06-5,4.583-5h2.917v3.75h-2.917 c-0.463,0-0.833,0.556-0.833,1.25V10z'/>
+</svg></span></a>
+        </li>
+      
+      
+        <li>
+          <a target='_blank' href='https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.media.mit.edu%2F&amp;mini=true'><span class='icon'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25 25' style='enable-background:new 0 0 25 25;' xml:space='preserve'><path d='M6.1,7.5L6.1,7.5C4.8,7.5,4,6.7,4,5.6c0-1.1,0.8-1.9,2.1-1.9c1.3,0,2.1,0.8,2.1,1.9C8.2,6.7,7.4,7.5,6.1,7.5z M8,20.4H4.2 V9.1H8V20.4z M21.5,20.4h-3.8v-6c0-1.5-0.5-2.6-1.9-2.6c-1,0-1.7,0.7-1.9,1.4c-0.1,0.3-0.1,0.6-0.1,0.9v6.3H10c0-10.2,0-11.3,0-11.3 h3.8v1.6h0c0.5-0.8,1.4-1.9,3.4-1.9c2.5,0,4.3,1.6,4.3,5.1V20.4z'/></svg>
+</span></a>
+        </li>
+      
+  </ul>
+</div>
+
+
+            
+
+            <a class='close-modal-x close-modal'>
+                <i class='icon'>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20px" height="20px">
+     <path id="XMLID_730_" d="M7.9,20c-0.2,0-0.4-0.2-0.4-0.4v-7.1H0.4c-0.2,0-0.4-0.2-0.4-0.4V7.9c0-0.2,0.2-0.4,0.4-0.4h7.1V0.4
+         C7.5,0.2,7.7,0,7.9,0h4.2c0.2,0,0.4,0.2,0.4,0.4v7.1h7.1c0.2,0,0.4,0.2,0.4,0.4v4.2c0,0.2-0.2,0.4-0.4,0.4h-7.1v7.1
+         c0,0.2-0.2,0.4-0.4,0.4H7.9z"/>
+</svg>
+
+                </i>
+            </a>
+        </div>
+
+        <div class='slideshow-images'>
+            
+            {{#each images}}
+                <div class='image-wrapper'>
+                    <div class='image' style='background-image: url("{{ encodeURI image.url }}")'></div>
+                </div>
+            {{/each}}
+            
+        </div>
+
+        <div class='slideshow-controls'>
+            <a class='prev-image'>
+                <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M15.228,21.396l-8.623-8.622c-0.146-0.146-0.146-0.396,0-0.542l8.623-8.623 c0.146-0.146,0.396-0.146,0.542,0l2.624,2.624c0.146,0.146,0.146,0.396,0,0.542l-5.749,5.728l5.749,5.728 c0.146,0.146,0.146,0.396,0,0.542l-2.624,2.624c-0.083,0.062-0.167,0.104-0.271,0.104S15.312,21.458,15.228,21.396z'/>
+</svg>
+                Previous
+            </a>
+            <a class='next-image'>
+                Next
+                <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='25' height='25' viewBox='0 0 25 25' enable-background='new 0 0 25 25' xml:space='preserve'>
+    <path d='M9.772,3.603l8.623,8.623c0.146,0.146,0.146,0.396,0,0.542L9.772,21.39c-0.146,0.146-0.396,0.146-0.542,0 l-2.624-2.624c-0.146-0.146-0.146-0.396,0-0.542l5.728-5.728L6.606,6.769c-0.146-0.146-0.146-0.396,0-0.542L9.23,3.603 C9.313,3.541,9.397,3.5,9.501,3.5S9.688,3.541,9.772,3.603z'/>
+</svg>
+            </a>
+
+            <p class='slideshow-counter'>
+                <span class='current-index'></span>
+                of
+                <span class='total-count'></span>
+            </p>
+        </div>
+
+        
+        <div class='slideshow-meta'>
+            <div class='slideshow-meta-body'>
+                {{#each images}}
+                <div class='slideshow-image-meta-wrap'>
+                    <p class='slideshow-image-title'>
+                        {{ title }}
+                    </p>
+                    <div class='slideshow-image-caption'>
+                        {{{ caption }}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+            <div class='slideshow-meta-footer'>
+                {{#each images}}
+                <p class='slideshow-image-title'>
+                    {{ title }}
+                </p>
+                {{/each}}
+
+                <div class='slideshow-tags'>
+                    {{#each tags}}
+                    <a href='{{url_path}}'>#{{title}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</script>
+
+        </div>
+
+        
+            <script src='http://localhost:5555/js/common.876bad966688.js'></script>
+        
+
+        
+        <!-- Google Analytics -->
+        <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        
+        
+        ga('create', 'UA-83133910-1', 'auto');
+        ga('send', 'pageview');
+        
+        
+        
+        ga('create', 'UA-1592615-30', {'name':'mitsitewide'});
+        ga('mitsitewide.send', 'pageview');
+        
+        
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <!-- End Google Analytics -->
+        
+
+        
+        
+
+        
+        <script>
+            require(['Raven'], function (Raven) {
+                Raven.config('https://348f83c6ba454447a1dea8753e38fa5d@sentry.media.mit.edu/3').install();
+                
+            });
+        </script>
+        
+
+        
+
+        <script>
+            require(['core'], function (core) {
+                var serviceOptions = {
+                    externalLinkObserver: {
+                        linksInModal:  false
+                    }
+                };
+                core.init(mlScripts, serviceOptions);
+            });
+
+            if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+                require(['services/ieHandler'], function (ieHandler) {
+                    ieHandler.init();
+                });
+            }
+        </script>
+</body>
+</html>
