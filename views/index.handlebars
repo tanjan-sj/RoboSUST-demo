@@ -171,33 +171,19 @@
         
             <!-- <li class='state-current '> -->
                 {{#if user}}
-                    
+                    <li><a href='/users/projects'>Projects</a></li>                   
+                    <li><a href='/users/members/'>Members</a></li>                  
+                    <li><a href='/users/team/'>Team</a></li>
+                    <li><a href='/users/write/'>Write</a></li>                   
                     <li><a href='/users/about'>About</a></li>
-                    
-                    <li><a href='/users/projects'>Projects</a></li>
-                    
-                    
-                    <li><a href='/users/members/'>Members</a></li>
-                    
-                    
-                    <li><a href='/users/team/'>Team</a></li>
-
-                    <li><a href='/users/write/'>Write</a></li>
-
                     <li><a href='/users/logout/'>Logout</a></li>
-                    {{else}}
-                
-                    <li><a href='/users/about/'>About</a></li>
-                    
-                    <li><a href='/users/projects'>Projects</a></li>
-                    
-                    
-                    <li><a href='/users/members/'>Members</a></li>
-                                        
-                    <li><a href='/users/team/'>Team</a></li>
-
+                {{else}}
                     <li><a href='/users/register/'>Register</a></li>
-                    {{/if}}
+                     <li><a href='/users/projects'>Projects</a></li>
+                     <li><a href='/users/members/'>Members</a></li>
+                     <li><a href='/users/team/'>Team</a></li>
+                     <li><a href='/users/about/'>About</a></li>
+                {{/if}}
     </ul>
 </nav>
 
@@ -230,13 +216,13 @@
         <img src="http://localhost:5555/img/sustlogo.png" style="height: 50px; width: 50px;">   
         </div>
 
-        <h1 class='hero-content-title' style='color: white;'><a href='/'>RoboSUST: Robotics for Glory</a></h1>
+        <h1 class='hero-content-title' style='color: white;'>RoboSUST: Robotics for Glory</h1>
         <div class='hero-content-meta'>
             
                 
 
 <div>
-    in <a href="/">IICT-432(A)</a> &middot; SUST
+    in <span style='color: yellow'>IICT-432(A)</span> &middot; SUST
 </div>
 
             
@@ -273,36 +259,19 @@
     
         
             {{#if user}}
-                    
-                    
-                    <li><a href='/users/about/'>About</a></li>
-                    
                     <li><a href='/users/projects'>Projects</a></li>
-                    
-                    
                     <li><a href='/users/members/'>Members</a></li>
-                    
-                    
                     <li><a href='/users/team/'>Team</a></li>
-
                     <li><a href='/users/write/'>Write</a></li>
-
+                    <li><a href='/users/about/'>About</a></li>
                     <li><a href='/users/logout/'>Logout</a></li>
-                    {{else}}
-                    
-                    
-                    <li><a href='/users/about'>About</a></li>
-                    
-                    <li><a href='/users/projects'>Projects</a></li>
-                    
-                    
-                    <li><a href='/users/members/'>Members</a></li>
-                    
-                    
-                    <li><a href='/users/team/'>Team</a></li>
-
+                {{else}}
                     <li><a href='/users/register/'>Register</a></li>
-                    {{/if}}
+                    <li><a href='/users/projects'>Projects</a></li>
+                    <li><a href='/users/members/'>Members</a></li>
+                    <li><a href='/users/team/'>Team</a></li>
+                    <li><a href='/users/about'>About</a></li>
+               {{/if}}
     
 </ul>
 
@@ -355,12 +324,7 @@
     
         
             {{#if user}}
-                   
-                    
-                    <li><a href='/users/about'>About</a></li>
-                    
                     <li><a href='/users/projects/'>Projects</a></li>
-                    
                     
                     <li><a href='/users/members/'>Members</a></li>
                     
@@ -369,22 +333,18 @@
 
                     <li><a href='/users/write/'>Write</a></li>
 
-                    <li><a href='/users/logout/'>Logout</a></li>
-                    {{else}}
-                    
                     
                     <li><a href='/users/about'>About</a></li>
                     
-                    <li><a href='/users/projects'>Projects</a></li>
                     
-                    
-                    <li><a href='/users/members/'>Members</a></li>
-                    
-                    
+                    <li><a href='/users/logout/'>Logout</a></li>
+                {{else}}               
+                    <li><a href='/users/register/'>Register</a></li>            
+                    <li><a href='/users/projects'>Projects</a></li>                  
+                    <li><a href='/users/members/'>Members</a></li>                   
                     <li><a href='/users/team/'>Team</a></li>
-
-                    <li><a href='/users/register/'>Register</a></li>
-                    {{/if}}
+                    <li><a href='/users/about'>About</a></li> 
+                {{/if}}
 
         
     
